@@ -9,7 +9,7 @@ export default function gallery() {
 						width={800}
 						height={800}
 						alt='cute'
-						src='/images/hero.jpg'
+						src='/images/waifu/1.jpeg'
 						priority={true}
 						className='w-96 object-cover h-[500px] hover:w-full '
 					></Image>
@@ -19,7 +19,7 @@ export default function gallery() {
 						width={800}
 						height={800}
 						alt='cute'
-						src='/images/hero.jpg'
+						src='/images/waifu/2.jpeg'
 						priority={true}
 						className='w-96 object-cover h-[500px] hover:w-full'
 					></Image>
@@ -29,7 +29,7 @@ export default function gallery() {
 						width={800}
 						height={800}
 						alt='cute'
-						src='/images/hero.jpg'
+						src='/images/waifu/3.jpeg'
 						priority={true}
 						className='w-96 object-cover h-[500px] hover:w-full'
 					></Image>
@@ -39,7 +39,7 @@ export default function gallery() {
 						width={800}
 						height={800}
 						alt='cute'
-						src='/images/hero.jpg'
+						src='/images/waifu/4.jpeg'
 						priority={true}
 						className='w-96 object-cover h-[500px] hover:w-full'
 					></Image>
@@ -49,7 +49,7 @@ export default function gallery() {
 						width={800}
 						height={800}
 						alt='cute'
-						src='/images/hero.jpg'
+						src='/images/waifu/5.jpeg'
 						priority={true}
 						className='w-96 object-cover h-[500px] hover:w-full'
 					></Image>

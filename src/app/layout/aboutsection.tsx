@@ -30,7 +30,7 @@ export default function Aboutsection() {
 						as={NextImage}
 						height={500}
 						width={200}
-						src='/images/hero.jpg'
+						src='/images/profile.jpeg'
 						alt='Literally me'
 						className='object-cover h-[220px] border-3 rounded-xl border-black'
 					/>
