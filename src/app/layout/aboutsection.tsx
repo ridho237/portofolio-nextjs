@@ -69,7 +69,7 @@ export default function Aboutsection() {
 						</div>
 					</div>
 				</div>
-				<div className='flex flex-col items-center mt-8 bg-gray-200 pb-10'>
+				<div className='flex flex-col items-center pt-20 bg-gray-200 pb-10'>
 					<Gallery></Gallery>
 				</div>
 			</section>

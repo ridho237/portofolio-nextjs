@@ -11,7 +11,7 @@ export default function gallery() {
 						alt='cute'
 						src='/images/waifu/1.jpeg'
 						priority={true}
-						className='w-full object-cover h-[500px] hover:w-96'
+						className='w-72 object-cover h-[550px] hover:w-full'
 					></Image>
 				</div>
 				<div>
@@ -21,7 +21,7 @@ export default function gallery() {
 						alt='cute'
 						src='/images/waifu/2.jpeg'
 						priority={true}
-						className='w-full object-cover h-[500px] hover:w-96'
+						className='w-72 object-cover h-[550px] hover:w-full'
 					></Image>
 				</div>
 				<div>
@@ -31,7 +31,7 @@ export default function gallery() {
 						alt='cute'
 						src='/images/waifu/3.jpeg'
 						priority={true}
-						className='w-full object-cover h-[500px] hover:w-96'
+						className='w-72 object-cover h-[550px] hover:w-full'
 					></Image>
 				</div>
 				<div>
@@ -41,7 +41,7 @@ export default function gallery() {
 						alt='cute'
 						src='/images/waifu/4.jpeg'
 						priority={true}
-						className='w-full object-cover h-[500px] hover:w-96'
+						className='w-full object-cover h-[550px] hover:w-96'
 					></Image>
 				</div>
 				<div>
@@ -51,7 +51,7 @@ export default function gallery() {
 						alt='cute'
 						src='/images/waifu/5.jpeg'
 						priority={true}
-						className='w-full object-cover h-[500px] hover:w-96'
+						className='w-full object-cover h-[550px] hover:w-96'
 					></Image>
 				</div>
 			</div>
