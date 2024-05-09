@@ -69,10 +69,7 @@ export default function Aboutsection() {
 						</div>
 					</div>
 				</div>
-				<div className='flex flex-col items-center bg-gray-200 pb-10'>
-					<h1 className='font-bold text-xl antialiased my-10'>
-						My Support System
-					</h1>
+				<div className='flex flex-col items-center mt-8 bg-gray-200 pb-10'>
 					<Gallery></Gallery>
 				</div>
 			</section>

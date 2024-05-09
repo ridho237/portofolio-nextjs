@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function gallery() {
 	return (
 		<main>
-			<div className='flex flex-col max-w-[250px] rounded-xl border-8 border-black md:flex-row md:max-w-[950px]'>
+			<div className='flex flex-col max-w-[250px] rounded-xl border-8 border-black md:flex-row md:max-w-[940px]'>
 				<div>
 					<Image
 						width={800}
@@ -51,7 +51,7 @@ export default function gallery() {
 						alt='cute'
 						src='/images/waifu/5.jpeg'
 						priority={true}
-						className='w-96 object-cover h-[500px] hover:w-full'
+						className='w-full object-cover h-[500px] hover:w-96'
 					></Image>
 				</div>
 			</div>
