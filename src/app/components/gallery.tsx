@@ -1,58 +1,94 @@
+'use client';
+import { ArrowBigLeft, ArrowBigRight } from 'lucide-react';
 import Image from 'next/image';
+import React, { useEffect, useRef, useState } from 'react';
 
-export default function gallery() {
+export default function Gallery() {
+	const [currentImg, setCurrentImg] = useState(0);
+	const [carouselSize, setCarouselSize] = useState({ width: 0, height: 0 });
+	const carouselRef = useRef<HTMLDivElement>(null);
+
+	// useEffect to get the initial carousel size
+	useEffect(() => {
+		let elem = carouselRef.current as HTMLDivElement;
+		let { width, height } = elem.getBoundingClientRect();
+		if (carouselRef.current) {
+			setCarouselSize({
+				width,
+				height,
+			});
+		}
+	}, []);
+
+	const data = [
+		{
+			src: '/images/waifu/1.jpg',
+		},
+		{
+			src: '/images/waifu/2.jpg',
+		},
+		{
+			src: '/images/waifu/3.jpg',
+		},
+		{
+			src: '/images/waifu/4.jpg',
+		},
+		{
+			src: '/images/waifu/5.jpg',
+		},
+	];
+
 	return (
 		<main>
-			<div className='flex flex-col max-w-[250px] rounded-xl border-8 border-black md:flex-row md:max-w-[940px]'>
-				<div>
-					<Image
-						width={800}
-						height={800}
-						alt='cute'
-						src='/images/waifu/1.jpeg'
-						priority={true}
-						className='w-72 object-cover h-[550px] hover:w-full'
-					></Image>
+			<div>
+				{/* Carousel container */}
+				<div className='relative h-[600px] w-[970px] overflow-hidden rounded-xl'>
+					{/* Image container */}
+					<div
+						ref={carouselRef}
+						style={{
+							left: -currentImg * carouselSize.width,
+						}}
+						className='absolute flex h-full w-full transition-all duration-300'
+					>
+						{/* Map through data to render images */}
+						{data.map((v, i) => (
+							<div
+								key={4}
+								className='relative h-full w-full shrink-0'
+							>
+								<Image
+									style={{ objectFit: 'cover' }}
+									className='pointer-events-none'
+									fill
+									alt={`carousel-image-${i}`}
+									src={v.src}
+								/>
+							</div>
+						))}
+					</div>
 				</div>
-				<div>
-					<Image
-						width={800}
-						height={800}
-						alt='cute'
-						src='/images/waifu/2.jpeg'
-						priority={true}
-						className='w-72 object-cover h-[550px] hover:w-full'
-					></Image>
-				</div>
-				<div>
-					<Image
-						width={800}
-						height={800}
-						alt='cute'
-						src='/images/waifu/3.jpeg'
-						priority={true}
-						className='w-72 object-cover h-[550px] hover:w-full'
-					></Image>
-				</div>
-				<div>
-					<Image
-						width={800}
-						height={800}
-						alt='cute'
-						src='/images/waifu/4.jpeg'
-						priority={true}
-						className='w-full object-cover h-[550px] hover:w-96'
-					></Image>
-				</div>
-				<div>
-					<Image
-						width={800}
-						height={800}
-						alt='cute'
-						src='/images/waifu/5.jpeg'
-						priority={true}
-						className='w-full object-cover h-[550px] hover:w-96'
-					></Image>
+
+				{/* Navigation buttons */}
+				<div className='mt-3 flex w-full rounded-full justify-between bg-gray-300'>
+					<button
+						disabled={currentImg === 0}
+						onClick={() => setCurrentImg((prev) => prev - 1)}
+						className={`flex justify-center w-full border px-4 py-2 font-bold ${
+							currentImg === 0 && 'opacity-50'
+						}`}
+					>
+						<ArrowBigLeft />
+					</button>
+					<button
+						disabled={currentImg === data.length - 1}
+						onClick={() => setCurrentImg((prev) => prev + 1)}
+						className={`flex justify-center w-full border px-4 py-2 font-bold ${
+							currentImg === data.length - 1 && 'opacity-50'
+						}`}
+					>
+						<ArrowBigRight />
+					</button>
 				</div>
 			</div>
 		</main>

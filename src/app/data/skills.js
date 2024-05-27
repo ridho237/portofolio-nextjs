@@ -20,6 +20,13 @@ const skills = [
 		desc: 'HTML adalah singkatan dari HyperText Markup Language, digunakan untuk merancang halaman web.',
 		link: 'https://id.wikipedia.org/wiki/HTML',
 	},
+	{
+		title: 'Packet Tracer',
+		author: 'Cisco Systems',
+		img: '/images/cisco.jpg',
+		desc: 'Packet Tracer adalah simulator alat-alat jaringan Cisco yang sering digunakan sebagai media pembelajaran dan pelatihan, dan juga dalam bidang penelitian simulasi jaringan komputer.',
+		link: 'https://id.wikipedia.org/wiki/Packet_Tracer',
+	},
 ];
 
 module.exports = { skills };

@@ -1,21 +1,11 @@
 'use client';
-import React, { useRef } from 'react';
 import { Input, RadioGroup, Radio, Textarea } from '@nextui-org/react';
-import Github from '../icon/github';
-import Call from '../icon/call';
-import Gmail from '../icon/gmail';
-import Send from '../icon/send';
+import Github from '../../app/icon/github';
+import Gmail from '../../app/icon/gmail';
+import Call from '../../app/icon/call';
+import { SendHorizontal } from 'lucide-react';
 
 export default function Contact() {
-	const formRef = useRef<HTMLFormElement>(null);
-
-	const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-		event.preventDefault();
-		if (formRef.current) {
-			formRef.current.requestSubmit();
-		}
-	};
-
 	return (
 		<main>
 			<section
@@ -50,27 +40,24 @@ export default function Contact() {
 							</p>
 							<div className='flex flex-col gap-3'>
 								<div className='flex flex-row items-center'>
-									<Call></Call>
+									<Call />
 									<p className='ml-3'>+62 812 9141 7962</p>
 								</div>
 								<div className='flex flex-row items-center'>
-									<Gmail></Gmail>
+									<Gmail />
 									<p className='ml-3'>ridho@gmail.com</p>
 								</div>
 								<div className='flex flex-row items-center'>
-									<Github></Github>
+									<Github />
 									<p className='ml-3'>ridho237</p>
 								</div>
 							</div>
 						</div>
 					</div>
 					<form
-						ref={formRef}
-						action='https://formspree.io/f/your-formspree-endpoint'
 						method='POST'
 						className='flex flex-wrap flex-col gap-5 p-5 w-[512px] border-2 border-t-0 border-black 
                                                         lg:border-2 lg:border-l-0'
-						onSubmit={handleFormSubmit}
 					>
 						<div className='flex w-full flex-wrap md:flex-nowrap gap-4'>
 							<Input
@@ -100,20 +87,15 @@ export default function Contact() {
 						<Textarea
 							label='Description'
 							placeholder='Enter your description'
-							className=''
 						/>
 						<div className='flex justify-center md:justify-end'>
 							<button
-								type='button'
-								onClick={() => {
-									if (formRef.current) {
-										formRef.current.requestSubmit();
-									}
-								}}
-								className='flex flex-row justify-center items-center bg-black 
-                                        text-white text-sm font-medium px-4 py-2 rounded-xl shadow'
+								type='submit'
+								className='flex flex-row gap-2 justify-center items-center bg-black 
+                                        text-white text-sm font-medium px-2 py-2 rounded-xl shadow'
 							>
-								<Send></Send>Send
+								<SendHorizontal />
+								Send
 							</button>
 						</div>
 					</form>

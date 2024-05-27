@@ -24,7 +24,7 @@ export default function SkillSection() {
 					{skills.map((item) => (
 						<div
 							key={item.title}
-							className='p-4 max-w-xs'
+							className='p-4 w-[230px]'
 						>
 							<div className='h-full border-1 border-gray-200 border-opacity-60'>
 								<Image
@@ -34,19 +34,19 @@ export default function SkillSection() {
 									alt={item.title}
 									className='h-48 w-full object-cover object-center'
 								/>
-								<div className='p-6'>
-									<h2 className='text-xs title-font font-medium text-gray-400 mb-1'>
+								<div className='p-5 h-36'>
+									<h2 className='text-xs title-font font-medium text-gray-500 mb-1'>
 										{item.author}
 									</h2>
-									<h1 className='title-font text-lg font-medium text-gray-900 mb-3'>
+									<h1 className='truncate title-font text-lg font-medium text-gray-900 mb-3'>
 										{item.title}
 									</h1>
-									<p className='mb-3 max-h-16'>{item.desc}</p>
+									<p className='mb-3 h-19 line-clamp-3'>{item.desc}</p>
 								</div>
 								<div className='p-6 mx-0'>
 									<a
 										href={item.link}
-										className='text-gray-400 inline-flex items-center hover:text-black'
+										className='text-gray-500 inline-flex items-center hover:text-black'
 									>
 										Read More
 									</a>

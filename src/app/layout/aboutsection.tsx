@@ -1,17 +1,20 @@
-import Beckendicon from '../icon/beckend';
-import Fronticon from '../icon/front';
-import Networkicon from '../icon/network';
-import Gallery from '../components/gallery';
-import DownIcon from '../icon/download';
 import { Image } from '@nextui-org/react';
+import {
+	ArrowDownToLine,
+	Cloud,
+	Network,
+	Server,
+	Wallpaper,
+} from 'lucide-react';
 import NextImage from 'next/image';
+import Gallery from '../components/gallery';
 
 export default function Aboutsection() {
 	return (
 		<main>
 			<section id='aboutSect'>
-				<div className='flex flex-wrap mx-4 bg-gray-200'>
-					<div className='w-full px-4'>
+				<div className='flex flex-wrap justify-center bg-gray-200'>
+					<div className='w-full'>
 						<div className='mx-auto mb-12 max-w-[512px] text-center'>
 							<h2 className='mb-10 mt-10 text-3xl font-bold leading-[1.2] text-black sm:text-4xl md:text-[40px]'>
 								ABOUT ME
@@ -47,8 +50,9 @@ export default function Aboutsection() {
 						</div>
 						<div>
 							<div>
-								<button className='flex flex-row justify-center items-center bg-gray-500 text-white text-sm font-medium px-4 py-2 rounded shadow'>
-									<DownIcon></DownIcon>Download CV
+								<button className='flex flex-row gap-2 justify-center items-center bg-gray-500 text-white text-sm font-medium px-2 py-2 rounded-xl shadow'>
+									<ArrowDownToLine />
+									Download CV
 								</button>
 							</div>
 						</div>
@@ -56,20 +60,29 @@ export default function Aboutsection() {
 
 					<div className='flex flex-col my-10 pl-1 justify-center gap-5 w-[300px] md:pl-14 sm:pl-20'>
 						<div className='flex flex-row items-center'>
-							<Fronticon></Fronticon>
+							<Wallpaper />
 							<p className='font-semibold ml-3'>Front-End Developer</p>
 						</div>
 						<div className='flex flex-row items-center'>
-							<Beckendicon></Beckendicon>
+							<Server />
 							<p className='font-semibold ml-3'>Back-End Developer</p>
 						</div>
 						<div className='flex flex-row items-center'>
-							<Networkicon></Networkicon>
+							<Cloud />
 							<p className='font-semibold ml-3'>Cloud Computing</p>
+						</div>
+						<div className='flex flex-roe items-center'>
+							<Network />
+							<p className='font-semibold ml-3'>Networking</p>
 						</div>
 					</div>
 				</div>
-				<div className='flex flex-col items-center pt-20 bg-gray-200 pb-10'>
+				<div className='flex justify-center pt-10 bg-gray-200'>
+					<h2 className='text-3xl font-bold text-black sm:text-4xl md:text-[40px]'>
+						MY INTEREST
+					</h2>
+				</div>
+				<div className='flex flex-col items-center pt-5 bg-gray-200 pb-10'>
 					<Gallery></Gallery>
 				</div>
 			</section>
