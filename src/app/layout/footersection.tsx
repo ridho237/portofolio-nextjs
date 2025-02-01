@@ -1,13 +1,13 @@
 'use client';
 import React from 'react';
-import { Navbar, NavbarItem, Link } from '@nextui-org/react';
+import { Navbar, NavbarItem, Link } from '@heroui/react';
 
 export default function footer() {
 	return (
 		<main>
 			<section>
-				<div className='flex flex-row flex-wrap justify-center items-center border-t-2 sm:justify-between'>
-					<div className='ml-0 mt-2 sm:ml-10 sm:mt-0'>
+				<div className='flex flex-row flex-wrap justify-center items-center	 sm:justify-between'>
+					<div className='ml-0 mt-2 sm:ml-10 sm:mt-0 dark:text-white'>
 						<p>© 2024 Made with Next UI by Muhammad Ridho.</p>
 					</div>
 					<div>

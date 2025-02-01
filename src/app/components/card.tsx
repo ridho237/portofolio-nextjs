@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Card, CardBody, CardFooter, Image } from '@nextui-org/react';
+import { Card, CardBody, CardFooter, Image } from '@heroui/react';
 import { cert } from '../data/cert';
 
 export default function card() {

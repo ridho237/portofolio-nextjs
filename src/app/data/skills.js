@@ -27,6 +27,19 @@ const skills = [
 		desc: 'Packet Tracer adalah simulator alat-alat jaringan Cisco yang sering digunakan sebagai media pembelajaran dan pelatihan, dan juga dalam bidang penelitian simulasi jaringan komputer.',
 		link: 'https://id.wikipedia.org/wiki/Packet_Tracer',
 	},
+	{
+		title: 'Node JS',
+		author: 'Ryan Lienhart Dahl',
+		img: '/images/node.jpg',
+		desc: 'Node.js adalah platform perangkat lunak yang dirancang oleh Ryan Dahl. Node.js adalah runtime untuk lingkungan JavaScript di luar peramban web yang dibangun di atas mesin JavaScript V8.',
+		link: 'https://id.wikipedia.org/wiki/Node.js',
+	},
+	{
+		title: 'Next JS',
+		author: 'Guillermo Rauch',
+		img: '/images/next.jpg',
+		desc: 'Next.js adalah kerangka kerja React yang menyediakan beberapa fitur tambahan, termasuk rendering sisi server dan rendering statis.',
+		link: 'https://en.wikipedia.org/wiki/Next.js',
+	},
 ];
-
 module.exports = { skills };
