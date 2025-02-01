@@ -28,6 +28,15 @@ export default function Aboutsection() {
 	const onOpen = () => setIsOpen(true);
 	const onOpenChange = () => setIsOpen(!isOpen);
 
+	const handleDownload = () => {
+		const link = document.createElement('a');
+		link.href = '/doc/resume.pdf';
+		link.download = 'Resume.pdf';
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	};
+
 	return (
 		<main>
 			<section
@@ -219,7 +228,7 @@ export default function Aboutsection() {
 										>
 											Close
 										</Button>
-										<Button onPress={onClose}>Download CV</Button>
+										<Button onPress={handleDownload}>Download CV</Button>
 									</ModalFooter>
 								</>
 							)}
