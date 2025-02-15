@@ -48,6 +48,12 @@ export default function Project() {
 			link: 'https://github.com/ridho237/portofolio-nextjs',
 		},
 		{
+			src: '/images/waifu/9.jpg',
+			title: 'Tsu-List',
+			desc: 'FullStack List Anime/Drama Berbasis Web',
+			link: 'https://github.com/ridho237/tsuList-frontend',
+		},
+		{
 			src: '/images/waifu/3.jpg',
 			title: 'Tansyitul Finansial',
 			desc: 'Backend Pencatatan SPP Berbasis Android Bersama kelompok',

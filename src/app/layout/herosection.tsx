@@ -37,12 +37,11 @@ export default function herosection() {
 				</div>
 				<div className='flex justify-center items-center sm:w-1/2 w-full h-[500px] sm:h-screen'>
 					<Image
-						isBlurred
 						width={500}
 						height={500}
 						alt='cute'
 						src='/images/hero.png'
-						className='w-[290px] sm:w-[400px] object-cover rounded-xxl border-black dark:border-white border-3 shadow-lg'
+						className='w-[290px] sm:w-[400px] object-cover rounded-xxl border-black dark:border-white border-3'
 					/>
 				</div>
 			</div>
